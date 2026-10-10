@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+        <title> Tic Tac Toe - Part 2</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .grid-container {
+                width: 400px;;
+                display:flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                border: 2px solid #1e1550;
+            }
+            .square {
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                padding: 5px;
+                border: 1px solid #040000;
+
+                font-size: 50px;
+                text-align: center;
+                line-height: 100px;
+            }
+            .square:hover {
+                background-color:rgb(185, 191, 196);
+            }
+            #turns {
+                padding: 8px;
+                margin: 20px;
+                width: 400px;
+                border: 1px solid #1e1550;
+            }
+            #win-condition {
+                padding: 10px;
+                margin: 20px;
+                width: 400px;
+                justify-content: center;
+                border: 1px solid #1e1550;
+
+                font-size: 20px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>Tic Tac Toe</h1>
+        <div id = "turns"></div>
+
+        <div class = "grid-container">
+            <!--creating divs for all 9 squares-->
+            <script>
+                const NUM_SQUARES = 9;
+
+                for (i = 0; i < NUM_SQUARES; i++) {
+                    id = "sq"+ i;
+                    document.write( "<div class='square' id='" + id + "'></div>");
+                }
+            </script>
+        </div>
+
+        <div id = "win-condition"></div>
+
+        <!-- placed an X on rol 1, col 3, and an O in row 2, col 1-->
+        <script>
+            document.getElementById("sq2").innerText = "X";
+            document.getElementById("sq3").innerText = "O";
+        </script>
+
+    </body>
+</html>
